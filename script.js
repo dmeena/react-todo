@@ -1,4 +1,4 @@
-//MAIN APP COMPONENT
+//MAIN COMPONENT
 var Main= React.createClass({
   getInitialState: function(){
     return {
@@ -25,17 +25,17 @@ var Main= React.createClass({
     )
   }
 });
-
+//HEADER COMPONENT
 var Header= React.createClass({
     render: function(){
       return(
         <div className="header">
           TO DO Application
-        </div>
+        </div>  
       )
     }
 });
-
+//NOTE LIST COMPONENT
 var List= React.createClass({
     handleDeleteNote: function(e){
       this.props.onDeleteNote(e.target.getAttribute("data-index"));
@@ -65,7 +65,7 @@ var List= React.createClass({
       )
     }
 });
-
+//ADD A NOTE COMPONENT
 var Add= React.createClass({
   handleAddItem: function(){
     var getNode= document.getElementById("note");
@@ -90,5 +90,5 @@ var Add= React.createClass({
     )
   }
 });
-
+//RENDER TO DOCUMENT BODY
 ReactDOM.render(<Main/>, document.body);
